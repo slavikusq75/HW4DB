@@ -10,6 +10,6 @@ class PawnshopClient
 {
     public $firstName;
     public $familyName;
-    public $dateOfBirthday;
+    public $dateOfBirth;
 
 }
