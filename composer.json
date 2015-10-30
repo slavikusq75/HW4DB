@@ -1,0 +1,17 @@
+{
+    "name": "root/hw4db",
+    "authors": [
+        {
+            "name": "slavikusq75",
+            "email": "sl_msm@ukr.net"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Controllers\\": "src/Controllers/"
+        }
+    },
+    "require": {
+"twig/twig": "1.16.@dev"
+}
+}
