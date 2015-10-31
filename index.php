@@ -21,8 +21,20 @@ try {
     $db = new PDO('mysql:host=localhost;dbname=' . PawnShop . ';charset=UTF8', 'root', '7Rtz0mj4h');
     var_dump($db);
 }
-
+//It catches mistakes in connection
 catch(Exception $e) {
     echo $e->getMessage();
 }
-//$sql="INSERT INTO Clients"
+
+//Query via standart SQL method
+foreach($db->query( "SELECT * FROM Client" ) as $row) {
+    echo $row['idClient'] . " " . $row['familyName'] . " " . $row['firstName'] . "<br>";
+}
+
+//Query via POD method
+/*$stmt = $db->query( "SELECT * FROM names" );
+while($row = $stmt->fetch()) {
+    echo $row['idClient'] . " " . $row['familyName'] . " " . $row['firstName'] . "<br>";
+}*/
+
+
