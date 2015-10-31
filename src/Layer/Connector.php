@@ -5,7 +5,7 @@
  * Date: 30.10.15
  * Time: 10:40
  */
-namespace Repositories;
+namespace Entities;
 class Connector
 {
     private $pdo;
