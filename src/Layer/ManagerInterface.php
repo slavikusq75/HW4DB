@@ -17,7 +17,13 @@ interface ManagerInterface
      * @param mixed $entity
      * @return mixed
      */
-    public function insert($entity);
+    public function insert($entity)
+    {
+        # STH означает "Statement Handle"
+        $STH = pdo->prepare("INSERT INTO Clients ( familyName ) values ( 'Popov' )");
+        $STH->execute();
+    }
+
     /**
      * Update exist entity data in the DB
      * @param $entity
