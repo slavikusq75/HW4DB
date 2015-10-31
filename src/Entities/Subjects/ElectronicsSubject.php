@@ -9,4 +9,9 @@
 class ElectronicsSubject extends AbstractMortgagesSubject
 {
     public $assessedValue;
+
+    public function __construct()
+    {
+        $this->assessedValue;
+    }
 }

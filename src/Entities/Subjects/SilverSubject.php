@@ -10,4 +10,10 @@ class SilverSubject extends AbstractMortgagesSubject
 {
     public $weight;
     public $silversFineness;
+
+    public function __construct()
+    {
+        $this->weight;
+        $this->silversFineness;
+    }
 }

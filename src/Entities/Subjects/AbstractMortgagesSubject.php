@@ -9,4 +9,9 @@
 abstract class MortgagesSubject
 {
     public $subjectName;
+
+    public function __construct()
+    {
+        $this->subjectName;
+    }
 }

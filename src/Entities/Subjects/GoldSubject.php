@@ -10,4 +10,10 @@ class GoldSubject extends AbstractMortgagesSubject
 {
     public $weight;
     public $goldsFineness;
+
+    public function __construct()
+    {
+        $this->weight;
+        $this->goldsFineness;
+    }
 }

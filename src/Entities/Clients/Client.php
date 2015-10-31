@@ -12,4 +12,11 @@ class PawnshopClient
     public $familyName;
     public $dateOfBirth;
 
+    public function __construct()
+    {
+        $this->firstName;
+        $this->familyName;
+        $this->dateOfBirth;
+    }
+
 }
