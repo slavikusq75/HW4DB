@@ -9,7 +9,7 @@
     "autoload": {
         "psr-4": {
             "Layer\\": "src/Layer",
-            "Entities\\": "src/Entities/"
+            "Entities\\": "src/Entities"
         }
     },
     "require": {

@@ -29,3 +29,11 @@ class Connector
         return $this->pdo;
     }
 }
+
+
+
+//My attemption
+try {
+
+    /*$db = new PDO("mysql:host=$servername;dbname=$dbname","charset=UTF8", $username, $password);*/
+    $db = new PDO('mysql:host=localhost;dbname=' . 'PawnShop' . ';charset=UTF8', 'root', '7Rtz0mj4h');

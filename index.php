@@ -27,7 +27,7 @@ try {
     $db = new PDO('mysql:host=localhost;dbname=' . 'PawnShop' . ';charset=UTF8', 'root', '7Rtz0mj4h');
     var_dump($db);
 
-    
+    //$dbh->exec("CREATE DATABASE 'PawnShop1')");
 
     $rows = $db->exec("CREATE TABLE `Clients1`(
 	idClient INT PRIMARY KEY AUTO_INCREMENT,
@@ -54,6 +54,33 @@ try {
 	idContract INT PRIMARY KEY AUTO_INCREMENT,
 	numberOfContract INT(4) NOT NULL,
 	dateOfContract DATE NOT NULL )");
+
+    $rows3 = $db->exec("CREATE TABLE `Checks1`(
+	idCheck INT PRIMARY KEY AUTO_INCREMENT,
+	numberOfCheck INT(4) NOT NULL,
+	summOfCheck INT(6) NOT NULL,
+	dateOfCheck DATE NOT NULL )");
+
+    //Iserting data to DB
+    $rows = $db->exec("INSERT INTO `Clients1` VALUES
+            ('1',    'Ivanov',    'Ivan', '1990-03-20'),
+            ('2',    'Petrov',    'Petr', '1981-06-10'),
+            ('3', 'Vasiliyev', 'Vasiliy', '1970-01-01')");
+
+    $rows1 = $db->exec("INSERT INTO `MortgagesSubjects1` VALUES
+            ('1',  'Golden Ring', '4.35', '2500', '585'),
+            ('2', 'Mobile Phone',     '',  '400',    ''),
+            ('3',  'Silver Ring',  '6.3',   '80', '925')");
+
+    $rows2 = $db->exec("INSERT INTO `Contracts1` VALUES
+             ('1', '1562', '2015-09-20'),
+             ('2', '1498', '2015-08-10'),
+             ('3', '1163', '2015-03-02')");
+
+    $rows3 = $db->exec("INSERT INTO `Checks1` VALUES
+            ('1', '2134', '1250', '1990-03-20'),
+            ('2', '2005',  '250', '1981-06-10'),
+            ('3', '1720',   '60', '1970-01-01')");
 
 
 
@@ -117,3 +144,7 @@ foreach($result as $row) {
 //$rows1=$db->exec("DROP TABLE PawnShop.Clients1");
 //$rows1=$db->exec("DROP TABLE PawnShop.MortgagesSubjects1");
 //$rows2=$db->exec("DROP TABLE PawnShop.Contracts1");
+//$rows3=$db->exec("DROP TABLE PawnShop.Checks1");
+
+
+
