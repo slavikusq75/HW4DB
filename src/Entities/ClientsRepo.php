@@ -5,7 +5,7 @@
  * Date: 31.10.15
  * Time: 11:26
 */
-namespace Repositories;
+namespace Entities;
 
 class ClientsRepo
 {

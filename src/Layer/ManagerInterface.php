@@ -22,11 +22,8 @@ interface ManagerInterface
         # STH означает "Statement Handle"
         //$STH = pdo->prepare("INSERT INTO Clients ( familyName ) values ( 'Popov' )");
        // $STH->execute();
-        $rows = $db->exec("INSERT INTO `Clients1` VALUES
-		('1', 'Ivanov', 'Ivan'),
-		('2', 'Petrov', 'Petr'),
-		('3', 'Vasiliyev', 'Vasiliy')
-	");
+        $rows = $db->exec("INSERT INTO $tableName VALUES
+		('10', 'Vasiliyev', 'Vasiliy', '1970-01-01')");
     }
 
     /**

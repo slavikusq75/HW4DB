@@ -5,7 +5,10 @@
  * Date: 29.10.15
  * Time: 22:41
  */
+
 require_once 'vendor/autoload.php';
+
+//use Entities;
 
 Twig_Autoloader::register();
 
@@ -50,7 +53,7 @@ try {
   `AssessedValue` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1*/
 
-    $rows2 = $db->exec("CREATE TABLE `Contracts1`(
+   $rows2 = $db->exec("CREATE TABLE `Contracts1`(
 	idContract INT PRIMARY KEY AUTO_INCREMENT,
 	numberOfContract INT(4) NOT NULL,
 	dateOfContract DATE NOT NULL )");
@@ -116,7 +119,7 @@ try {
 }
 //It catches mistakes in connection
 catch(Exception $e) {
-    echo $e->getMessage();
+   echo $e->getMessage();
 }
 
 /*$rows = $db->exec("INSERT INTO `Clients1` VALUES
@@ -168,7 +171,23 @@ foreach($result as $row) {
 //$rows=$db->exec("DROP TABLE PawnShop.Clients1");
 //$rows1=$db->exec("DROP TABLE PawnShop.MortgagesSubjects1");
 //$rows2=$db->exec("DROP TABLE PawnShop.Contracts1");
-//$rows3=$db->exec("DROP TABLE PawnShop.Checks1");
+//$rows3=$db->exec("DROP TABLE PawnShop.Checks1");();
+
+//$connect1 = new Entities\Connector;
+
+//$firstName = "Kostia";
+//$familyName = "Kostev";
+
+$Client1 = new Entities\Client(10,'Smith','John', '1954-03-15');
+//$Client1->firstName = "$firstName";
+//$Client1->familyName = "$familyName";
+$Client1->insertData();
+var_dump($Client1);
 
 
 
+echo $Client1->familyName;
+echo $Client1->firstName;
+
+//$rows = $db->exec("INSERT INTO `Clients1` VALUES
+//       ('10', $Client1->familyName;, 'Vasiliy', '1970-01-01')");

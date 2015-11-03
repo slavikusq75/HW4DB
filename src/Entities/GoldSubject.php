@@ -6,6 +6,8 @@
  * Date: 28.10.15
  * Time: 9:28
  */
+namespace Entities;
+
 class GoldSubject extends AbstractMortgagesSubject
 {
     public $weight;

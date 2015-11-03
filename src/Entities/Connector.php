@@ -6,9 +6,11 @@
  * Time: 10:40
  */
 namespace Entities;
+
 class Connector
 {
-    private $pdo;
+   public $db;
+    //private $pdo;
     /**
      * StudentsRepository constructor.
      * Initialize the database connection with sql server via given credentials
@@ -16,7 +18,7 @@ class Connector
      * @param $user
      * @param $pass
      */
-    public function __construct($databasename, $user, $pass)
+/*    public function __construct($databasename, $user, $pass)
     {
         $this->pdo = new \PDO('mysql:host=localhost;dbname=' . $databasename . ';charset=UTF8', $user, $pass);
         if (!$this->pdo) {
@@ -28,12 +30,16 @@ class Connector
     {
         return $this->pdo;
     }
-}
+}*/
 
 
 
 //My attemption
-try {
-
+//try {
+    public function __construct()
+    {
     /*$db = new PDO("mysql:host=$servername;dbname=$dbname","charset=UTF8", $username, $password);*/
-    $db = new PDO('mysql:host=localhost;dbname=' . 'PawnShop' . ';charset=UTF8', 'root', '7Rtz0mj4h');
+        $this->db = new \PDO('mysql:host=localhost;dbname=' . 'PawnShop' . ';charset=UTF8', 'root', '7Rtz0mj4h');
+        return $this->db;
+    }
+}

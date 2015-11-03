@@ -6,6 +6,8 @@
  * Date: 28.10.15
  * Time: 9:21
  */
+namespace Entities;
+
 abstract class MortgagesSubject
 {
     public $subjectName;
