@@ -21,7 +21,7 @@ class Manager implements ManagerInterface
 
     public function __construct()
    {
-        $this->connector = new Connector();
+        $this->connector = new Connector;
         $this->connector = $this->connector->connect();
 
     }
@@ -34,8 +34,8 @@ class Manager implements ManagerInterface
         # STH означает "Statement Handle"
         //$STH = pdo->prepare("INSERT INTO Clients ( familyName ) values ( 'Popov' )");
         // $STH->execute();
-        $this->connector->exec("INSERT INTO `Clients1` VALUES
-		('12', 'Alibaba', 'Vasiliy', '1970-01-01')");
+        $this->connector->exec("INSERT INTO $tablename VALUES
+		('12', 'Vasiliyev', 'Vasiliy', '1970-01-01')");
     }
 
     /**

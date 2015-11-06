@@ -6,10 +6,12 @@
  * Time: 10:40
  */
 namespace Entities;
+//use Layer\ManagerInterface;
+use PDO;
 
 class Connector
 {
-   public $db;
+   protected $db;
     //private $pdo;
     /**
      * StudentsRepository constructor.
@@ -36,10 +38,15 @@ class Connector
 
 //My attemption
 //try {
-    public function __construct()
+    public function connect()
     {
     /*$db = new PDO("mysql:host=$servername;dbname=$dbname","charset=UTF8", $username, $password);*/
-        $this->db = new \PDO('mysql:host=localhost;dbname=' . 'PawnShop' . ';charset=UTF8', 'root', '7Rtz0mj4h');
+      return $this->db = new PDO('mysql:host=localhost;dbname=' . 'PawnShop' . ';charset=UTF8', 'root', '7Rtz0mj4h');
+    }
+
+    public function getdb()
+    {
         return $this->db;
     }
+
 }

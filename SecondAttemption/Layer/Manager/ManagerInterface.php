@@ -1,18 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: slava
- * Date: 31.10.15
- * Time: 12:58
- */
-namespace Layer;
+namespace Layer\Manager;
 /**
  * Interface ManagerInterface
  * @package Layer\Manager
  */
 interface ManagerInterface
 {
-
     /**
      * Insert new entity data to the DB
      * @param mixed $entity

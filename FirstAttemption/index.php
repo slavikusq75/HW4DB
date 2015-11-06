@@ -8,7 +8,7 @@
 
 require_once 'vendor/autoload.php';
 //use Entities;
-//use Entities;
+use Entities;
 //use Entities\Client;
 use Entities\ManagerWorkWithDB;
 use Layer\Manager;
@@ -30,12 +30,7 @@ $password = "7Rtz0mj4h";*/
 //$newConnect = new \Entities\Connector();
 //$newConnect->connect();
 
-//var_dump($newConnect);
-$tablename = 'Clients1';
-$newManager = new Manager();
-$newManager->insert($tablename);
-
-$var_dump = ($newManager);
+var_dump($newConnect);
 
 try {
     //?Doesn't work
@@ -202,11 +197,9 @@ var_dump($Client1);
 echo $Client1->familyName;
 echo $Client1->firstName;
 
-
-//$nM = new Entities\Connector();
-//$nM->insert($tablename);
-
-//var_dump($nM);
+$tablename = 'Client1';
+$nM = new Entities\Connector();
+$nM->insert($tablename);
 
 
 //$rows = $db->exec("INSERT INTO `Clients1` VALUES
