@@ -31,11 +31,18 @@ $password = "7Rtz0mj4h";*/
 //$newConnect->connect();
 
 //var_dump($newConnect);
+$id = '5';
 $tablename = 'Clients1';
-$newManager = new Manager();
-$newManager->insert($tablename);
+//$newManager = new Manager();
+//$newManager->insert('10', 'Smith', 'John', '1954-03-15');
+//$newManager->remove($tablename);
+//$newManager->update($tablename);
+//$newManager->find($tablename, $id);
 
-$var_dump = ($newManager);
+//while ($row = $newManager) {
+  // echo ['familyName'] . "\n";
+//}
+//$var_dump = ($newManager);
 
 try {
     //?Doesn't work
@@ -53,10 +60,12 @@ try {
 
     $rows1 = $db->exec("CREATE TABLE `MortgagesSubjects1`(
 	idSubject INT PRIMARY KEY AUTO_INCREMENT,
+	idClient INT,
 	subjectType VARCHAR(20) NOT NULL,
 	weight FLOAT NOT NULL,
 	assessedValue INT(5) NOT NULL,
-	fineness INT(3) NOT NULL )");
+	fineness INT(3) NOT NULL,
+	FOREIGN KEY (idClient) REFERENCES Clients1(idClient))");
 
     /*CREATE TABLE `MortgagesSubjects` (
     `idSubject` int(11) NOT NULL,
@@ -90,15 +99,15 @@ try {
             ('9', 'Vasiliyev', 'Vasiliy', '1970-01-01')");
 
     $rows1 = $db->exec("INSERT INTO `MortgagesSubjects1` VALUES
-            ('1',  'Golden Ring', '4.35', '2500', '585'),
-            ('2', 'Mobile Phone',     '',  '400',    ''),
-            ('3',  'Golden Ring', '6.35', '3500', '585'),
-            ('4', 'Mobile Phone',     '',  '600',    ''),
-            ('5', 'Mobile Phone',     '',  '400',    ''),
-            ('6',  'Golden Ring', '6.35', '3500', '585'),
-            ('7', 'Mobile Phone',     '',  '600',    ''),
-            ('8',  'Silver Ring',  '10.8',   '120', '925'),
-            ('9',  'Silver Ring',  '16.3',   '180', '916')");
+            ('1', '2', 'Golden Ring', '4.35', '2500', '585'),
+            ('2', '2', 'Mobile Phone',     '',  '400',    ''),
+            ('3', '9', 'Golden Ring', '6.35', '3500', '585'),
+            ('4', '9', 'Mobile Phone',     '',  '600',    ''),
+            ('5', '9', 'Mobile Phone',     '',  '400',    ''),
+            ('6', '7', 'Golden Ring', '6.35', '3500', '585'),
+            ('7', '3', 'Mobile Phone',     '',  '600',    ''),
+            ('8', '1', 'Silver Ring',  '10.8',   '120', '925'),
+            ('9', '6', 'Silver Ring',  '16.3',   '180', '916')");
 
     $rows2 = $db->exec("INSERT INTO `Contracts1` VALUES
              ('1', '1562', '2015-09-20'),
@@ -191,7 +200,7 @@ foreach($result as $row) {
 //$firstName = "Kostia";
 //$familyName = "Kostev";
 
-$Client1 = new Entities\Client(10,'Smith','John', '1954-03-15');
+$Client1 = new Entities\Client('17', 'Smoke', 'John', '1954-03-15', '4', 'MortgagesSubjects1');
 //$Client1->firstName = "$firstName";
 //$Client1->familyName = "$familyName";
 //$Client1->insertData();
@@ -199,8 +208,8 @@ var_dump($Client1);
 
 
 
-echo $Client1->familyName;
-echo $Client1->firstName;
+//echo $Client1->familyName;
+//echo $Client1->firstName;
 
 
 //$nM = new Entities\Connector();

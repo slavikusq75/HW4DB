@@ -8,14 +8,20 @@
  */
 namespace Entities;
 
-class SilverSubject extends AbstractMortgagesSubject
+class SilverSubject
 {
-    public $weight;
-    public $silversFineness;
+    protected $idSubject;
+    protected $subjectType;
+    protected $weight;
+    protected $assessedValue;
+    protected $fineness;
 
     public function __construct()
     {
+        $this->idSubject;
+        $this->subjectType;
         $this->weight;
-        $this->silversFineness;
+        $this->assessedValue;
+        $this->fineness;
     }
 }

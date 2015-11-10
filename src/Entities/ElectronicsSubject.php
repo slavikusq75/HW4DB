@@ -8,12 +8,18 @@
  */
 namespace Entities;
 
-class ElectronicsSubject extends AbstractMortgagesSubject
+class ElectronicsSubject
 {
-    public $assessedValue;
+    protected $subzero;
+    protected $connectorManager;
+    protected $idSubject;
+    protected $subjectType;
+    protected $assessedValue;
 
     public function __construct()
     {
+        $this->idSubject;
+        $this->subjectType;
         $this->assessedValue;
     }
 }

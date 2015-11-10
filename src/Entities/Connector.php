@@ -49,4 +49,10 @@ class Connector
         return $this->db;
     }
 
+    public function connectClose($db)
+    {
+        // TODO: Implement connectClose() method.
+        $db = null;
+    }
+
 }

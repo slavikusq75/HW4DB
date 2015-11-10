@@ -8,14 +8,20 @@
  */
 namespace Entities;
 
-class GoldSubject extends AbstractMortgagesSubject
+class GoldSubject
 {
-    public $weight;
-    public $goldsFineness;
+    protected $idSubject;
+    protected $subjectType;
+    protected $weight;
+    protected $assessedValue;
+    protected $fineness;
 
     public function __construct()
     {
+        $this->idSubject;
+        $this->subjectType;
         $this->weight;
-        $this->goldsFineness;
+        $this->assessedValue;
+        $this->fineness;
     }
 }
